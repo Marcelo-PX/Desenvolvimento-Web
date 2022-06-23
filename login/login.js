@@ -54,11 +54,13 @@ nome.addEventListener('keyup', ()=> {
     if(!inputNome.test(nome.value)){  
         nome.setAttribute('style', 'border-color: red');
         msgExtra.innerHTML = '<strong>*Nome inválido!</strong>'
+        console.log('FALSO')
          
     }else{
         nome.setAttribute('style', 'border-color: #00bf8e')
         msgExtra.innerHTML = ''
         valiNome = true
+        console.log('VERDADEIRO')
     }
 })
 // validar email cadastro
@@ -69,11 +71,12 @@ email.addEventListener('keyup', ()=> {
     if(!inputEmail.test(email.value)){  
         email.setAttribute('style', 'border-color: red');
         msgExtra.innerHTML = '<strong>*Email inválido!</strong>'
-         
+        console.log('FALSO')
     }else{
         email.setAttribute('style', 'border-color: #00bf8e')
         msgExtra.innerHTML = ''
         valiEmail = true
+        console.log('VERDADEIRO')
     }
 })
 // validar senha cadastro
@@ -82,17 +85,15 @@ senha.addEventListener('keyup', ()=> {
     const inputSenha = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[$*&@#])[0-9a-zA-Z$*&@#]{6,}$/;
 
     if(!inputSenha.test(senha.value)){
-
-        let msg2 = msgExtra
-
         senha.setAttribute('style', 'border-color: red');
-        msg2.setAttribute('style', 'font-size: 0.95rem');
-        msg2.innerHTML = '<strong>*Sua senha deve conter pelo menos 6 dígitos, letras maiúsculas e minúsculas e pelo menos um caractere especial.</strong>'
-         
+        msgExtra.setAttribute('style', 'font-size: 0.9rem');
+        msgExtra.innerHTML = '<strong>*Sua senha deve conter pelo menos 6 dígitos, letras maiúsculas e minúsculas e pelo menos um caractere especial.</strong>'
+        console.log('FALSO')
     }else{
         senha.setAttribute('style', 'border-color: #00bf8e')
-        msg2.innerHTML = ''
+        msgExtra.innerHTML = ''
         valiSenha = true
+        console.log('VERDADEIRO')
     }
 })
 // confirmar senha cadastro
@@ -100,24 +101,24 @@ senha2.addEventListener('keyup', ()=> {
     if(senha.value != senha2.value){
         senha2.setAttribute('style', 'border-color: red')
         msgExtra.innerHTML = '<strong>*As senhas devem ser iguais!</strong>'
+        console.log('FALSO')
     }else{
         senha2.setAttribute('style', 'border-color: #00bf8e')
         msgExtra.innerHTML = ''
         valiSenha2 = true
+        console.log('VERDADEIRO')
     }
 })
 // mensagem de cadastro
 function cadastrar(){
 
     if(valiNome && valiEmail && valiSenha && valiSenha2){
-        alert('TRUE')
-        // msgCadastro.setAttribute('style', 'display: block')
-        // msgCadastro.innerHTML = '<strong>Cadastro realizado com sucesso!</strong>'
+        msgCadastro.setAttribute('style', 'display: block')
+        msgCadastro.innerHTML = '<strong>Cadastro realizado com sucesso!</strong>'
 
         
     }else{
-        alert('FALSE')
-        // msgErro.setAttribute('style', 'displSSay: block')
-        // msgErro.innerHTML = '<strong>Por favor preencha todos os campos!</strong>'
+        msgErro.setAttribute('style', 'display: inline-block')
+        msgErro.innerHTML = '<strong>Por favor preencha todos os campos!</strong>'
     }
 }

@@ -28,6 +28,7 @@ form input[type=password]{
     padding-left: 1rem;
     margin: 0.5rem 0;
     border-color: transparent;
+    font-size: 1rem;
 }
 
 form input[type="submit"]{
@@ -75,14 +76,14 @@ form a:hover{
 .uil-eye{
     color: black;
     position: absolute;
-    margin: -3rem 16rem 0;
+    margin: -3rem 15.5rem 0;
     cursor: pointer;
 }
 
 .uil-eye-slash{
     color: black;
     position: absolute;
-    margin: -3rem 16rem 0;
+    margin: -3rem 15.5rem 0;
     cursor: pointer;
 }
 
@@ -101,7 +102,7 @@ form a:hover{
     background-color: #ffbbbb;
     padding: 0.3rem;
     border-radius: 0.3rem;
-    margin-left: 0.5rem;
+    margin-left: 0.3rem;
     display: none;
 }
 
