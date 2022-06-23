@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UNITED EDUCATIONAL</title>
+    
+    <!-- ICONSCOUT CDN -->
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+    
+    <!-- GOOGLE FONTS (MONTSERRAT) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@4300;00;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="../css/estilo.css">
+    <link rel="stylesheet" href="../css/cadastro.css">
+
+    <style>
+        .uil-eye{
+            color: black;
+            position: absolute;
+            margin: -3rem 16rem 0;
+            cursor: pointer;
+        }
+        .uil-eye-slash{
+            color: black;
+            position: absolute;
+            margin: -3rem 16rem 0;
+            cursor: pointer;
+        }
+
+        @-moz-document url-prefix() {
+            .uil-eye{
+                margin: 1rem -2rem 0;
+            }
+            .uil-eye-slash{
+                margin: 1rem -2rem 0;
+            }
+        }
+    </style>
+
+</head>
+<body>
+    <form>
+        <h4>Faça seu cadastro</h4>
+        <label id="msgCadastro"></label>
+        <label id="msgErro"></label>
+        <input type="text" id="nome" placeholder="Digite seu nome" maxlength="50" required />
+        <input type="email" id="email" placeholder="Digite seu email" maxlength="50" required />
+        <input type="password" id="senha" placeholder="Digite sua senha" maxlength="50" required />
+        <i id="verSenha" class="uil uil-eye"></i>
+        <input type="password" id="senha2" placeholder="Confirme sua senha" maxlength="50" required />
+        <i id="verSenha2" class="uil uil-eye"></i>
+        <label id="msgExtra"></label>
+        <input onclick="cadastrar()" type="submit" value="Cadastrar" class="btn btn-primary" />
+        <li id="entrar"><a href="login.html" >Entrar</a></li>
+    </form>
+</body>
+<script src="login.js"></script>
+</html>

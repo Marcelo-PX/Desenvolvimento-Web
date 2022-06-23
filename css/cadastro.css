@@ -1,0 +1,118 @@
+body{
+    background-color: var(--color-bg);
+}
+
+form{
+    background-color: var(--color-bg1);
+    max-width: 20rem;
+    width: 50%;
+    padding: 1rem;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 0.3rem;
+}
+
+form h4{
+    text-align: center;
+    margin: 1rem 0.5rem 1rem;
+}
+
+form input[type=text],
+form input[type=email],
+form input[type=password]{
+    width: 100%;
+    height: 3rem;
+    border-radius: 3rem;
+    padding-left: 1rem;
+    margin: 0.5rem 0;
+    border-color: transparent;
+}
+
+form input[type="submit"]{
+    cursor: pointer;
+    width: 50%;
+    height: 3rem;
+    margin: 1rem 4.4rem 0.5rem;
+    border: 0;
+    border-radius: 3rem;
+    border: 1px solid transparent;
+}
+
+form input[value="Entrar"],
+form input[value="Cadastrar"]{
+    margin-left: 4.5rem;
+    font-size: 1.2rem;
+    padding: 0;
+}
+
+form input[type=text]:focus,
+form input[type=email]:focus, 
+form input[type=password]:focus{
+    outline: 0;
+    border-color: var(--color-success);
+}
+
+#msgExtra{
+    font-size: 1rem;
+    color: red;
+}
+
+form a{
+    padding-left: 6.3rem;
+}
+
+form a:hover{
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+#entrar {
+    padding-left: 1.3rem;
+}
+
+.uil-eye{
+    color: black;
+    position: absolute;
+    margin: -3rem 16rem 0;
+    cursor: pointer;
+}
+
+.uil-eye-slash{
+    color: black;
+    position: absolute;
+    margin: -3rem 16rem 0;
+    cursor: pointer;
+}
+
+@-moz-document url-prefix(){
+    .uil-eye{
+        margin: 1rem -2rem 0;
+    }
+    .uil-eye-slash{
+        margin: 1rem -2rem 0;
+    }
+}
+
+#msgErro{
+    font-size: 0.9rem;
+    color: red;
+    background-color: #ffbbbb;
+    padding: 0.3rem;
+    border-radius: 0.3rem;
+    margin-left: 0.5rem;
+    display: none;
+}
+
+#msgCadastro{
+    font-size: 1rem;
+    color: var(--color-success);
+    background-color: #bbffbe;
+    padding: 0.3rem;
+    border-radius: 0.3rem;
+    margin-left: 0.7rem;
+    display: none;
+} 
+
+
