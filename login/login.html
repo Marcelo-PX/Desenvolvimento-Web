@@ -21,10 +21,11 @@
 <body>
     <form>
         <h4>Entre com seu cadastro</h4>
-        <input type="email" name="email" placeholder="Digite seu email" maxlength="50" required />
-        <input type="password" id="senha" placeholder="Digite sua senha" maxlength="50" required />
+        <input type="email" id="email" placeholder="Digite seu email" maxlength="50" />
+        <input type="password" id="senha" placeholder="Digite sua senha" maxlength="50" />
         <i id="verSenha" class="uil uil-eye"></i>
-        <input type="submit" name="login" value="Entrar" class="btn btn-primary" />
+        <label id="msgExtra"></label>
+        <input onclick="entrar()" type="submit" name="login" value="Entrar" class="btn btn-primary" />
         <li><a href="cadastro.html" >Cadastre-se</a></li>
     </form>   
 </body>
